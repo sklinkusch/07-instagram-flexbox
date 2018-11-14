@@ -1,0 +1,32 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+header {
+  display: flex;
+  justify-content: center;
+  color: grey;
+}
+.avatar {
+  flex: 0 0 250px;
+}
+.avatar img {
+  width: 150px;
+  border-radius: 50%;
+}
+.title {
+  display: flex;
+  justify-content: space-around;
+  flex: 1;
+  wrap: wrap;
+}
+.nickname {
+  font-size: 18pt;
+  flex: 1 1 500px;
+}
+.editbutton {
+  font-size: 14pt;
+  flex: 1 1 100px;
+  order: 1;
+}

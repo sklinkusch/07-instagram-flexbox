@@ -7,6 +7,7 @@ header {
   display: flex;
   justify-content: center;
   color: grey;
+  font-family: sans-serif;
 }
 .avatar {
   flex: 0 0 250px;
@@ -15,18 +16,41 @@ header {
   width: 150px;
   border-radius: 50%;
 }
+.text {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  flex: 0 0 180px;
+  wrap: wrap;
+}
 .title {
   display: flex;
-  justify-content: space-around;
-  flex: 1;
+  flex-direction: row;
   wrap: wrap;
+  justify-content: space-between;
 }
 .nickname {
   font-size: 18pt;
-  flex: 1 1 500px;
+  flex: 0 0 150px;
 }
 .editbutton {
   font-size: 14pt;
-  flex: 1 1 100px;
+  flex: 1 0 170px;
   order: 1;
+}
+.edit {
+  min-width: 120px;
+  font-size: 14pt;
+  color: grey;
+  background-color: white;
+  border: 1px solid grey;
+}
+.settingswheel {
+  flex: 0 0 calc(100% - 150px);
+}
+.settings {
+  opacity: 0.6;
+}
+.name {
+  font-weight: bold;
 }

@@ -78,9 +78,12 @@ header {
   text-align: center;
   flex: 1 1 auto;
 }
+.bold {
+  font-weight: bold;
+}
 @media screen and (max-width: 567px){
   main {
-    border: top;
+    margin-top: 10px;
     display: flex;
     flex-direction: column;
   }
@@ -90,6 +93,9 @@ header {
   }
   .img > img {
     width: 100%;
+  }
+  .description, .activity {
+    display: none;
   }
 }
 @media screen and (min-width:568px) and (max-width: 768px){
@@ -105,5 +111,24 @@ header {
   }
   .img > img {
     width: 100%;
+  }
+  .activity-full, .description-full {
+    display: none;
+  }
+  .activity {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 10px;
+  }
+  .editbutton {
+    flex: 0 0 30%;
+    order: -1;
+  }
+  .nickname {
+    flex: 0 0 40%;
+  }
+  header {
+    margin-bottom: 30px;
   }
 }

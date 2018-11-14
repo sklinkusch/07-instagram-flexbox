@@ -19,7 +19,7 @@ header {
   flex: 0 0 40%;
 }
 .avatar img {
-  width: 77px;
+  width: 150px;
   border-radius: 50%;
 }
 .text {
@@ -37,6 +37,7 @@ header {
   font-size: 14pt;
   flex: 0 0 70%;
   order: -1;
+  margin-bottom: 20px;
 }
 .editbutton {
   font-size: 12pt;
@@ -77,22 +78,26 @@ header {
   text-align: center;
   flex: 1 1 auto;
 }
-main {
-  border: top;
-  display: flex;
-  flex-direction: column;
-}
-main > .img {
-  flex: 0 0 100%;
-  margin: 10px auto;
-}
-.img > img {
-  width: 100%;
+@media screen and (max-width: 567px){
+  main {
+    border: top;
+    display: flex;
+    flex-direction: column;
+  }
+  main > .img {
+    flex: 0 0 100%;
+    margin: 10px auto;
+  }
+  .img > img {
+    width: 100%;
+  }
 }
 @media screen and (min-width:568px) and (max-width: 768px){
   main {
     display: flex;
     flex-direction: row;
+    justify-content: space-around;
+    align-items: space-around;
     flex-wrap: wrap;
   }
   main > .img {

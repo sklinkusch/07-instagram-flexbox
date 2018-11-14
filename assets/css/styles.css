@@ -16,14 +16,14 @@ header {
   
 }
 .avatar {
-  flex: 0 0 250px;
+  flex: 0 0 40%;
 }
 .avatar img {
-  width: 150px;
+  width: 77px;
   border-radius: 50%;
 }
 .text {
-  flex: 0 0 300px;
+  flex: 0 0 50%;
   align-self: center;
 }
 .title {
@@ -35,12 +35,12 @@ header {
 }
 .nickname {
   font-size: 14pt;
-  flex: 1 0 180px;
+  flex: 0 0 70%;
   order: -1;
 }
 .editbutton {
   font-size: 12pt;
-  flex: 1 0 auto;
+  flex: 0 0 100%;
 }
 .edit {
   min-width: 120px;
@@ -79,9 +79,26 @@ header {
 }
 main {
   border: top;
+  display: flex;
+  flex-direction: column;
 }
-main > img {
-  display: block;
-  width: 95%;
+main > .img {
+  flex: 0 0 100%;
   margin: 10px auto;
+}
+.img > img {
+  width: 100%;
+}
+@media screen and (min-width:568px) and (max-width: 768px){
+  main {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  main > .img {
+    flex: 0 0 40%;
+  }
+  .img > img {
+    width: 100%;
+  }
 }

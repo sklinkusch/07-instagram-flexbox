@@ -1,39 +1,51 @@
+/* General settings for all devices */
+/* Remove browser settings */
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
+/* margin for the body */
 body {
   margin: 10px;
 }
+/* font color and font family for the header (later: no text) */
 header {
   color: grey;
   font-family: sans-serif;
 }
+/* container for the profile image */
 .avatar {
   flex: 0 0 40%;
 }
+/* profile image */
 .avatar img {
   width: 60%;
   border-radius: 50%;
 }
+/* font and border for the button */
 .edit {
   font-size: 14pt;
   color: grey;
   background-color: white;
   border: 1px solid grey;
 }
+/* size and color of the wheel */
 .settings {
   opacity: 0.5;
   width: 25px;
 }
+/* set real name in the description to bold */
 .name {
   font-weight: bold;
 }
+/* set numbers in the posts/followers/following section to bold */
 .bold {
   font-weight: bold;
 }
+/* settings for mobile phones */
 @media screen and (max-width: 567px){
+  /* images in the main part are seated above each other with full width */
   main {
     margin-top: 10px;
     display: flex;
@@ -47,13 +59,17 @@ header {
   .img > img {
     width: 100%;
   }
-  .description, .activity {
-    display: none;
+  /* Profile image and text field next to it */
+  .titlesection {
+    display: flex;
+    justify-content: center;
   }
+  /* Text field right next to profile image */
   .text {
     flex: 0 0 50%;
     align-self: center;
   }
+  /* Title line (Nickname, Wheel, Edit Button)  */
   .title {
     align-self: flex-start;
     display: flex;
@@ -61,33 +77,39 @@ header {
     flex-wrap: wrap;
     justify-content: space-around;
   }
-  .titlesection {
-    display: flex;
-    justify-content: center;
+  /* Remove description and activity part next to profile image */
+  .description, .activity {
+    display: none;
   }
+  /* Nickname */
   .nickname {
     font-size: 20pt;
     flex: 0 0 70%;
     order: -1;
     margin-bottom: 20px;
   }
+  /* Container for the Edit Button */
   .editbutton {
     flex: 0 0 100%;
   }
+  /* Edit Button */
   .edit {
     min-width: 120px;
     width: 95%;
   }
+  /* Wheel image */
   .settingswheel {
     flex: 0 0 30px;
     order: -1;
   }
+  /* full description text below the titlesection */
   .description-full {
     font-size: 12pt;
     display: block;
     width: 80%;
     margin: 20px auto;
   }
+  /* full activity text below the title section */
   .activity-full {
     display: flex;
     padding: 10px 0;
@@ -99,7 +121,9 @@ header {
     flex: 1 1 auto;
   }
 }
+/* Styling for tablets */
 @media screen and (min-width:568px) and (max-width: 768px){
+  /* Main part with the images */
   main {
     display: flex;
     flex-direction: row;
@@ -113,33 +137,84 @@ header {
   .img > img {
     width: 100%;
   }
+  /* Header */
+  header {
+    margin-bottom: 30px;
+  }
+  /* Container for profile image and text right next to it */
+  .titlesection {
+    display: flex;
+    justify-content: center;
+  }
+  /* Text right next to profile image */
+  .text {
+    flex: 0 0 50%;
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  /* First line of text */
+  .title {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+  }
+  /* 1st element - nickname */
+  .nickname {
+    font-size: 20pt;
+    flex: 1 1 180px;
+    order: -1;
+    margin-bottom: 20px;
+  }
+  /* 2nd element - container for the button */
+  .editbutton {
+    flex: 1 0 150px;
+    text-align: center;
+  }
+  /* button */
+  .edit {
+    width: 120px;
+  }
+  /* contaiiner for the settingswheel */
+  .settingswheel {
+    flex: 1 1 50px;
+    text-align: right;
+  }
+  /* The activity and description texts below the title sections are off */
   .activity-full, .description-full {
     display: none;
   }
+  /* Activity section next to profile image */
   .activity {
     flex: 1 0 40px;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
   }
-  .nickname {
-    flex: 0 0 40%;
-  }
+}
+/* Settings for wide screens */
+@media screen and (min-width: 769px){
+  /* Header */
   header {
     margin-bottom: 30px;
   }
+  /* Title section with profile image and text right next to it */
+  .titlesection {
+    display: flex;
+    justify-content: center;
+  }
+  /* Text part next to profile image */
   .text {
     flex: 0 0 50%;
     align-self: center;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-
   }
-  .titlesection {
-    display: flex;
-    justify-content: center;
-  }
+  /* First row of text section */
   .title {
     width: 100%;
     display: flex;
@@ -147,86 +222,51 @@ header {
     flex-wrap: nowrap;
     justify-content: space-between;
   }
+  /* Nickname */
   .nickname {
-    flex: 1 1 180px;
+    flex: 1 0 180px;
     order: -1;
     margin-bottom: 20px;
+    font-size: 20pt;
   }
+  /* Container for the edit button */
   .editbutton {
     flex: 1 0 150px;
     text-align: center;
+    order: -1;
   }
+  /* Edit button */
   .edit {
     width: 120px;
   }
+  /* Wheel image */
   .settingswheel {
-    flex: 1 1 50px;
+    flex: 1 0 50px;
     text-align: right;
   }
-}
-@media screen and (min-width: 769px){
-  header {
-    margin-bottom: 30px;
-  }
-  .activity-full, .description-full {
-    display: none;
-  }
+  /* Activity section */
   .activity {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     padding: 10px;
   }
-  .img > img {
-    width: 100%;
+  /* Extra sections below the image are switched off */
+  .activity-full, .description-full {
+    display: none;
   }
-  main > .img {
-    flex: 0 0 28%;
-    margin-bottom: 10px;
-  }
+  /* Main part with the images */
   main {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     flex-wrap: wrap;
   }
-  .title {
-    flex: 0 0 20%;
+  main > .img {
+    flex: 0 0 28%;
+    margin-bottom: 10px;
   }
-  .text {
-    flex: 0 0 50%;
-    align-self: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-
-  }
-  .titlesection {
-    display: flex;
-    justify-content: center;
-  }
-  .title {
+  .img > img {
     width: 100%;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: space-between;
-  }
-  .nickname {
-    flex: 1 0 180px;
-    order: -1;
-    margin-bottom: 20px;
-  }
-  .editbutton {
-    flex: 1 0 150px;
-    text-align: center;
-    order: -1;
-  }
-  .edit {
-    width: 120px;
-  }
-  .settingswheel {
-    flex: 1 0 50px;
-    text-align: right;
   }
 }

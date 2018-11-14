@@ -31,7 +31,7 @@ header {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 .nickname {
   font-size: 14pt;
@@ -62,7 +62,7 @@ header {
   font-weight: bold;
 }
 .description-full {
-  font-size: 10pt;
+  font-size: 12pt;
   display: block;
   width: 80%;
   margin: 20px auto;
@@ -76,4 +76,12 @@ header {
 .activity-full > div {
   text-align: center;
   flex: 1 1 auto;
+}
+main {
+  border: top;
+}
+main > img {
+  display: block;
+  width: 95%;
+  margin: 10px auto;
 }

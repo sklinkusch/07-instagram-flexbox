@@ -17,9 +17,6 @@ header {
   width: 60%;
   border-radius: 50%;
 }
-.nickname {
-  font-size: 20pt;
-}
 .edit {
   font-size: 14pt;
   color: grey;
@@ -32,22 +29,6 @@ header {
 }
 .name {
   font-weight: bold;
-}
-.description-full {
-  font-size: 12pt;
-  display: block;
-  width: 80%;
-  margin: 20px auto;
-}
-.activity-full {
-  display: flex;
-  padding: 10px 0;
-  border-top: 1px solid grey;
-  border-bottom: 1px solid grey;
-}
-.activity-full > div {
-  text-align: center;
-  flex: 1 1 auto;
 }
 .bold {
   font-weight: bold;
@@ -100,6 +81,22 @@ header {
   .settingswheel {
     flex: 0 0 30px;
     order: -1;
+  }
+  .description-full {
+    font-size: 12pt;
+    display: block;
+    width: 80%;
+    margin: 20px auto;
+  }
+  .activity-full {
+    display: flex;
+    padding: 10px 0;
+    border-top: 1px solid grey;
+    border-bottom: 1px solid grey;
+  }
+  .activity-full > div {
+    text-align: center;
+    flex: 1 1 auto;
   }
 }
 @media screen and (min-width:568px) and (max-width: 768px){
@@ -171,13 +168,6 @@ header {
   header {
     margin-bottom: 30px;
   }
-  .nickname {
-    flex: 0 0 40%;
-  }
-  .editbutton {
-    flex: 0 0 30%;
-    order: -1;
-  }
   .activity-full, .description-full {
     display: none;
   }
@@ -200,19 +190,8 @@ header {
     justify-content: space-around;
     flex-wrap: wrap;
   }
-  .text {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around
-  }
   .title {
     flex: 0 0 20%;
-  }
-  .editbutton {
-    flex: 0 0 20%;
-  }
-  .settingswheel {
-    flex: 0 0 10%;
   }
   .text {
     flex: 0 0 50%;
@@ -241,6 +220,7 @@ header {
   .editbutton {
     flex: 1 0 150px;
     text-align: center;
+    order: -1;
   }
   .edit {
     width: 120px;

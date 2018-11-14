@@ -10,54 +10,24 @@ header {
   color: grey;
   font-family: sans-serif;
 }
-.titlesection {
-  display: flex;
-  justify-content: center;
-  
-}
 .avatar {
   flex: 0 0 40%;
 }
 .avatar img {
-  width: 150px;
+  width: 60%;
   border-radius: 50%;
 }
-.text {
-  flex: 0 0 50%;
-  align-self: center;
-}
-.title {
-  align-self: flex-start;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-around;
-}
 .nickname {
-  font-size: 14pt;
-  font-weight: bold;
-  flex: 0 0 70%;
-  order: -1;
-  margin-bottom: 20px;
-}
-.editbutton {
-  font-size: 12pt;
-  flex: 0 0 100%;
+  font-size: 20pt;
 }
 .edit {
-  min-width: 120px;
-  width: 95%;
   font-size: 14pt;
   color: grey;
   background-color: white;
   border: 1px solid grey;
 }
-.settingswheel {
-  flex: 0 0 30px;
-  order: -1
-}
 .settings {
-  opacity: 0.6;
+  opacity: 0.5;
   width: 25px;
 }
 .name {
@@ -99,6 +69,38 @@ header {
   .description, .activity {
     display: none;
   }
+  .text {
+    flex: 0 0 50%;
+    align-self: center;
+  }
+  .title {
+    align-self: flex-start;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  .titlesection {
+    display: flex;
+    justify-content: center;
+  }
+  .nickname {
+    font-size: 20pt;
+    flex: 0 0 70%;
+    order: -1;
+    margin-bottom: 20px;
+  }
+  .editbutton {
+    flex: 0 0 100%;
+  }
+  .edit {
+    min-width: 120px;
+    width: 95%;
+  }
+  .settingswheel {
+    flex: 0 0 30px;
+    order: -1;
+  }
 }
 @media screen and (min-width:568px) and (max-width: 768px){
   main {
@@ -118,20 +120,51 @@ header {
     display: none;
   }
   .activity {
+    flex: 1 0 40px;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    padding: 10px;
-  }
-  .editbutton {
-    flex: 0 0 30%;
-    order: -1;
   }
   .nickname {
     flex: 0 0 40%;
   }
   header {
     margin-bottom: 30px;
+  }
+  .text {
+    flex: 0 0 50%;
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+  }
+  .titlesection {
+    display: flex;
+    justify-content: center;
+  }
+  .title {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+  }
+  .nickname {
+    flex: 1 0 180px;
+    order: -1;
+    margin-bottom: 20px;
+  }
+  .editbutton {
+    flex: 1 0 150px;
+    text-align: center;
+  }
+  .edit {
+    width: 120px;
+  }
+  .settingswheel {
+    flex: 1 0 50px;
+    text-align: right;
   }
 }
 @media screen and (min-width: 769px){
@@ -166,5 +199,19 @@ header {
     flex-direction: row;
     justify-content: space-around;
     flex-wrap: wrap;
+  }
+  .text {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around
+  }
+  .title {
+    flex: 0 0 20%;
+  }
+  .editbutton {
+    flex: 0 0 20%;
+  }
+  .settingswheel {
+    flex: 0 0 10%;
   }
 }
